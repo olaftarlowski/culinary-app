@@ -1,28 +1,29 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DataList from "./components/DataList";
-import { default as api } from "./api/api";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import { Api } from "./components";
+import { Home, About } from "./pages";
+import { Header } from "./components/layout";
+
 import "./App.css";
 
 const App = () => {
-  const [airtableData, setAirtableData] = useState([]);
-
-  const getDataHandler = () => {
-    api.getData().then((data) => setAirtableData(data.records));
-  };
-
-  useEffect(() => {
-    getDataHandler();
-  }, []);
-
   return (
     <Router>
       <div className="App">
         <h2>App component</h2>
+        <Header />
         {/* <button onClick={asd}>lik</button> */}
         <div>
           <Routes>
-            <Route path="/" element={<DataList data={airtableData} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/api" element={<Api />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </div>

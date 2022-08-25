@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_KEY = `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`;
-const API_URL = "https://api.airtable.com/v0/app4Fn5LIMlVBvrA3";
+const API_URL = process.env.REACT_APP_AIRTABLE_API_URL;
 
 const getData = async () => {
   axios.defaults.headers = {

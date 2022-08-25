@@ -14,7 +14,7 @@ const DataList = ({ data }) => {
               <div>{item.fields.Notes}</div>
               <div>{item.fields.Status}</div>
               <div style={{ border: "1px solid yellow", margin: 12 }}>
-                {item.fields["TAKI JEDEN"].map((el) => {
+                {item.fields.TAKIJEDEN.map((el) => {
                   return <div key={el}>{el}</div>;
                 })}
               </div>
