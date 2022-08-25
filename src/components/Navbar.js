@@ -1,41 +1,35 @@
 import { NavLink } from "react-router-dom";
 import { NavbarWrapper } from "../styled-components/style";
 
-const Navbar = () => {
+const Navbar = ({ setIsNavExpanded }) => {
   const activeClassName = "active";
+
+  const navbarItems = [
+    { name: "home", to: "/" },
+    { name: "about", to: "/about" },
+    { name: "api", to: "/api" },
+  ];
+
   return (
     <NavbarWrapper>
       <ul>
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/api"
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
-          >
-            Api
-          </NavLink>
-        </li>
+        {navbarItems.map((item) => {
+          return (
+            <li
+              key={`navbar-${item.name}`}
+              onClick={() => setIsNavExpanded((e) => !e)}
+            >
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
     </NavbarWrapper>
   );
