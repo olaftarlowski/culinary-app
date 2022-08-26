@@ -18,7 +18,7 @@ const App = () => {
         <h2>App component</h2>
         <Header />
         {/* <button onClick={asd}>lik</button> */}
-        <div>
+        <div style={{ width: "100%" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/api" element={<Api />} />
