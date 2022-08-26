@@ -7,7 +7,7 @@ import {
 
 import { Api } from "./components";
 import { Home, About } from "./pages";
-import { Header } from "./components/layout";
+import { Footer, Header } from "./components/layout";
 
 import "./App.css";
 
@@ -26,6 +26,7 @@ const App = () => {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
+        <Footer/>
       </div>
     </Router>
   );
