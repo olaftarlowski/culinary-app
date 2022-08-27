@@ -1,5 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
+
 import { Navbar } from "../";
 import { Collapse } from "react-collapse";
 import useMobile from "../hooks/useMobile";
@@ -11,11 +13,7 @@ const Header = () => {
   const isMobile = useMobile();
   const headerRef = useRef();
 
-  useEffect(() => {
-    
-  }, []);
-
-  const klik = () => {
+  const expandMenuHandler = () => {
     setIsNavExpanded(!isNavExpanded);
     setTimeout(() => {
       setHeaderHeight(headerRef.current.clientHeight);
@@ -37,7 +35,9 @@ const Header = () => {
           <Link to="/" className="header__logo">
             Logo
           </Link>
-          {isMobile && <button onClick={klik}>TEST</button>}
+          {isMobile && (
+            <Hamburger toggled={isNavExpanded} toggle={expandMenuHandler} />
+          )}
         </div>
         {isMobile ? navbarMobile : navbarDesk}
       </div>
