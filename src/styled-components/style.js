@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const AppContentWrapper = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #282c34;
+  min-height: 160vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`;
+
 export const HeaderWrapper = styled.header`
   background: #f8fafd;
   width: 100%;
@@ -74,4 +87,8 @@ export const NavbarWrapper = styled.nav`
       }
     }
   }
+`;
+
+export const MainWrapper = styled.main`
+  display: block;
 `;
