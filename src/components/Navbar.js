@@ -5,9 +5,9 @@ const Navbar = ({ setIsNavExpanded }) => {
   const activeClassName = "active";
 
   const navbarItems = [
-    { name: "home", to: "/" },
-    { name: "about", to: "/about" },
-    { name: "api", to: "/api" },
+    { name: "główna", to: "/" },
+    { name: "o nas", to: "/about" },
+    { name: "kontakt", to: "/api" },
   ];
 
   return (

@@ -35,6 +35,9 @@ export const HeaderWrapper = styled.header`
     z-index: 100;
 
     .ReactCollapse--collapse {
+      position: absolute;
+      top: ${(props) => props.headerHeight + 1}px;
+      right: 0;
       transition: height 500ms;
     }
 
@@ -57,8 +60,8 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const NavbarWrapper = styled.nav`
-  background-color: seagreen;
-  border: 1px solid white;
+  background-color: #f8fafd;
+  /* border: 1px solid white; */
 
   display: flex;
   align-items: center;
@@ -73,16 +76,28 @@ export const NavbarWrapper = styled.nav`
     }
 
     li {
+      padding: 0 12px;
+
       a {
+        min-width: 120px;
+
+        display: block;
         text-transform: capitalize;
         text-decoration: none;
         color: inherit;
         padding: 0.75rem 1.25rem;
         transition: 0.3s ease all;
+        border-bottom: 1px solid #d2d2d2;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+          padding: 0.5rem 4rem;
+        }
 
         &:hover,
         &.active {
           color: #3861fb;
+          border-bottom: 2px solid #3861fb;
         }
       }
     }
