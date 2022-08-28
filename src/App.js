@@ -7,7 +7,7 @@ import {
 
 import { Api } from "./components";
 import { Home, About } from "./pages";
-import { Header, Main } from "./components/layout";
+import { Header, Main, Footer } from "./components/layout";
 
 import { AppContentWrapper } from "./styled-components/style";
 
@@ -26,6 +26,7 @@ const App = () => {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Main>
+        <Footer />
       </AppContentWrapper>
     </Router>
   );
