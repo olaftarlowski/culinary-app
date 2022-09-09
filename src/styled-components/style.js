@@ -5,7 +5,6 @@ export const AppContentWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   background-color: #282c34;
-  min-height: 160vh;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import { Logo } from "../";
+import { Logo } from "../";
 
 import { FooterWrapper } from "../../styled-components/style";
 
@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <FooterWrapper className="footer">
       <div className="footer__container">
-        {/* <Logo /> */}
+        <div><Logo /></div>
         <div className="footer__info">
           <ul className="footer__list">
             <li className="footer__item">

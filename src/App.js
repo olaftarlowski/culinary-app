@@ -15,9 +15,7 @@ const App = () => {
   return (
     <Router>
       <AppContentWrapper>
-        <h2>App component</h2>
         <Header />
-        {/* <button onClick={asd}>lik</button> */}
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
