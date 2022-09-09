@@ -15,14 +15,12 @@ const App = () => {
   return (
     <Router>
       <AppContentWrapper>
-        <h2>App component</h2>
         <Header />
-        {/* <button onClick={asd}>lik</button> */}
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/api" element={<Api />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/o-nas" element={<About />} />
+            <Route path="/kontakt" element={<Api />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Main>
