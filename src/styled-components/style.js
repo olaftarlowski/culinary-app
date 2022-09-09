@@ -129,10 +129,9 @@ export const FooterWrapper = styled.footer`
   font-size: 1.4rem;
   color: #777;
   width: 100%;
-  box-sizing: border-box;
 
   @media (max-width: 768px) {
-    padding: 0 6px;
+    padding: 0 12px;
   }
 
   .footer__container {
@@ -184,6 +183,19 @@ export const FooterWrapper = styled.footer`
     text-align: right;
     font-size: 0.8rem;
     border-top: 1px solid #d5d9dc;
+  }
+
+  .footer__creator {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+
+    address {
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+    }
   }
 `;
 
