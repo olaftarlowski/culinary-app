@@ -21,8 +21,8 @@ const App = () => {
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/api" element={<Api />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/o-nas" element={<About />} />
+            <Route path="/kontakt" element={<Api />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Main>

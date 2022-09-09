@@ -1,14 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kuchnia Marysi",
+  "name": "Kuchnia Marysi",
+  "description": "Kuchnia Marysi - pyszne przepisy na każdą okazje",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon_km.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "favicon_km.png",
+      "type": "image/png",
+      "sizes": "32x32"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "id": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

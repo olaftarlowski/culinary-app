@@ -16,12 +16,13 @@ export const AppContentWrapper = styled.div`
 export const HeaderWrapper = styled.header`
   background: #f8fafd;
   width: 100%;
-  border-bottom: 1px solid #eff2f5;
+  border: 1px solid #d2d2d2;
 
   position: sticky;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10000;
 
   .header__content {
     height: 100%;
@@ -45,24 +46,23 @@ export const HeaderWrapper = styled.header`
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     @media (max-width: 768px) {
+      padding: 0 12px;
       flex-direction: column;
     }
-  }
-  .header__logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
   }
 `;
 
 export const NavbarWrapper = styled.nav`
+  width: 100%;
   background-color: #f8fafd;
-  /* border: 1px solid white; */
-
   display: flex;
   align-items: center;
 
@@ -70,6 +70,7 @@ export const NavbarWrapper = styled.nav`
     list-style: none;
     padding: 0;
     display: flex;
+    margin: 0;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -77,10 +78,18 @@ export const NavbarWrapper = styled.nav`
 
     li {
       padding: 0 12px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
 
       a {
         min-width: 120px;
-
+        white-space: nowrap;
         display: block;
         text-transform: capitalize;
         text-decoration: none;
@@ -91,13 +100,18 @@ export const NavbarWrapper = styled.nav`
 
         @media (max-width: 768px) {
           font-size: 1.5rem;
-          padding: 0.5rem 4rem;
+          padding: 0.5rem 2rem;
+        }
+
+        @media (max-width: 265px) {
+          font-size: 1.3rem;
+          padding: 0.5rem 1rem;
         }
 
         &:hover,
         &.active {
           color: #3861fb;
-          border-bottom: 2px solid #3861fb;
+          border-bottom: 1px solid #3861fb;
         }
       }
     }
@@ -170,5 +184,22 @@ export const FooterWrapper = styled.footer`
     text-align: right;
     font-size: 0.8rem;
     border-top: 1px solid #d5d9dc;
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  display: block;
+  max-width: 120px;
+  max-height: 120px;
+
+  .main-logo {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 `;

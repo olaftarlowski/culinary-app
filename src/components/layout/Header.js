@@ -1,9 +1,8 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
-
-import { Navbar } from "../";
 import { Collapse } from "react-collapse";
+
+import { Navbar, Logo } from "../";
 import useMobile from "../hooks/useMobile";
 import { HeaderWrapper } from "../../styled-components/style";
 
@@ -32,9 +31,7 @@ const Header = () => {
     <HeaderWrapper ref={headerRef} headerHeight={headerHeight}>
       <div className="header__content">
         <div className="logosDIV">
-          <Link to="/" className="header__logo">
-            Logo
-          </Link>
+          <Logo />
           {isMobile && (
             <Hamburger toggled={isNavExpanded} toggle={expandMenuHandler} />
           )}
